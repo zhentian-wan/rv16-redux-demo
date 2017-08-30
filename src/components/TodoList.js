@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux';
 
 const TodoItem = ({id, name, isComplete}) => (
     <li>
@@ -15,4 +16,6 @@ const TodoList =  (props) => (
     </div>
 );
 
-export default TodoList;
+export default connect(
+    (state) => ({todos: state.todos})
+)(TodoList);
