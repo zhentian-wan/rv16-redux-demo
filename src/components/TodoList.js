@@ -11,7 +11,7 @@ const TodoItem = ({id, name, isComplete}: TodoType) => (
     </li>
 )
 
-const TodoList =  (props) => (
+const TodoList =  (props: {todos: Array<TodoType>}) => (
     <div className="Todo-List">
         <ul>
             {props.todos.map(todo => <TodoItem key={todo.id} {...todo} />)}
