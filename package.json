@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "flow-bin": "^0.54.0",
     "json-server": "^0.12.0",
     "react": "next",
     "react-dom": "next",
@@ -11,6 +12,7 @@
     "redux": "^3.7.2"
   },
   "scripts": {
+    "flow": "flow",
     "dev-server": "json-server -p 9000 db.json",
     "start": "react-scripts start",
     "build": "react-scripts build",

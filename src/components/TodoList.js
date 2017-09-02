@@ -1,7 +1,10 @@
+// @flow
 import React from 'react'
 import {connect} from 'react-redux';
+import type {TodoType} from '../store';
 
-const TodoItem = ({id, name, isComplete}) => (
+
+const TodoItem = ({id, name, isComplete}: TodoType) => (
     <li>
         <input type="checkbox" defaultChecked={isComplete} />
         {name}

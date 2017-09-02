@@ -1,8 +1,14 @@
+// @flow
 import React from 'react'
 import {connect} from 'react-redux';
 import {updateCurrent} from '../reducers/todo';
 
-const TodoForm = (props) => {
+type TodoFormType = {
+    currentTodo: string,
+    updateCurrent: Function
+};
+
+const TodoForm = (props: TodoFormType) => {
     const {currentTodo, updateCurrent} = props;
     return (
         <form>
