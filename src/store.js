@@ -1,6 +1,7 @@
 
 // @flow
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
 import reducer from './reducers/todo';
 
 export type TodoType = {
@@ -15,14 +16,10 @@ export type StateType = {
 };
 
 const initState: StateType = {
-    todos: [
-        {id: 1, name: 'Render static UI', isComplete: true},
-        {id: 2, name: 'Create initial state', isComplete: false},
-        {id: 3, name: 'Render based on state', isComplete: true}
-    ],
-    currentTodo: 'Temp'
+    todos: [],
+    currentTodo: ''
 };
 
-const store = createStore(reducer, initState);
+const store = createStore(reducer, initState, applyMiddleware(thunk));
 
 export default store;
