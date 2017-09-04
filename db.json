@@ -14,45 +14,6 @@
       "id": 3,
       "name": "Render based on state",
       "isComplete": true
-    },
-    {
-      "isComplete": false,
-      "id": 4
-    },
-    {
-      "name": "new todo",
-      "isComplete": false,
-      "id": 5
-    },
-    {
-      "name": "awefff",
-      "isComplete": false,
-      "id": 6
-    },
-    {
-      "name": "efwe",
-      "isComplete": false,
-      "id": 7
-    },
-    {
-      "name": "wfe",
-      "isComplete": false,
-      "id": 8
-    },
-    {
-      "name": "awef",
-      "isComplete": false,
-      "id": 9
-    },
-    {
-      "name": "ewf",
-      "isComplete": false,
-      "id": 10
-    },
-    {
-      "name": "awef",
-      "isComplete": false,
-      "id": 11
     }
   ]
 }
