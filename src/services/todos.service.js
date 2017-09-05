@@ -17,3 +17,15 @@ export const createTodo = async (name) => {
     })
         .then((res) => res.json());
 };
+
+export const updateTodo = async (todo) => {
+    return await fetch(`http://localhost:9000/todos/${todo.id}`, {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(todo)
+    })
+        .then((res) => res.json());
+};

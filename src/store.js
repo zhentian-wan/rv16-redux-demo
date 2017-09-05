@@ -1,9 +1,17 @@
 
 // @flow
-import {createStore, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import reducer from './reducers/todo';
+import todoReducer from './reducers/todo';
+import messageReducer from './reducers/message';
+
+const reducers = combineReducers(
+    {
+        message: messageReducer,
+        todo: todoReducer
+    }
+);
 
 export type TodoType = {
     id: number,
@@ -11,17 +19,25 @@ export type TodoType = {
     isComplete: boolean
 };
 
-export type StateType = {
+export type TodosStateType = {
     todos: Array<TodoType>,
     currentTodo: string
+}
+
+export type StateType = {
+    todo: TodosStateType,
+    message: string
 };
 
 const initState: StateType = {
-    todos: [],
-    currentTodo: ''
+    todo: {
+        todos: [],
+        currentTodo: ''
+    },
+    message: ''
 };
 
-const store = createStore(reducer, initState, composeWithDevTools(
+const store = createStore(reducers, initState, composeWithDevTools(
     applyMiddleware(thunk)
 ));
 

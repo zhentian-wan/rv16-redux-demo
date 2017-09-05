@@ -2,12 +2,15 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux';
 import type {TodoType} from '../store';
-import {fetchTodos} from '../reducers/todo';
+import {fetchTodos, toggleTodo} from '../reducers/todo';
 
 
-const TodoItem = ({id, name, isComplete}: TodoType) => (
+const TodoItem = ({id, name, isComplete, toggleTodo}: TodoType) => (
     <li>
-        <input type="checkbox" defaultChecked={isComplete} />
+        <input
+            type="checkbox"
+            onChange={() => toggleTodo(id)}
+            checked={isComplete} />
         {name}
     </li>
 )
@@ -21,7 +24,7 @@ class TodoList extends Component {
         return (
             <div className="Todo-List">
                 <ul>
-                    {this.props.todos.map(todo => <TodoItem key={todo.id} {...todo} />)}
+                    {this.props.todos.map(todo => <TodoItem key={todo.id} toggleTodo={this.props.toggleTodo} {...todo} />)}
                 </ul>
             </div>
         )
@@ -29,6 +32,6 @@ class TodoList extends Component {
 }
 
 export default connect(
-    (state) => ({todos: state.todos}),
-    {fetchTodos}
+    (state) => ({todos: state.todo.todos}),
+    {fetchTodos, toggleTodo}
 )(TodoList);
