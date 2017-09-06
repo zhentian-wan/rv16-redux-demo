@@ -1,10 +1,12 @@
+const baseUrl = process.env.REACT_APP_BASE_URL;
+
 export const getTodos = async () => {
-    return await fetch('http://localhost:9001/todos')
+    return await fetch(baseUrl)
         .then((response) => response.json());
 };
 
 export const createTodo = async (name) => {
-    return await fetch('http://localhost:9001/todos', {
+    return await fetch(baseUrl, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -19,7 +21,7 @@ export const createTodo = async (name) => {
 };
 
 export const updateTodo = async (todo) => {
-    return await fetch(`http://localhost:9001/todos/${todo.id}`, {
+    return await fetch(`${baseUrl}/${todo.id}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
@@ -32,7 +34,7 @@ export const updateTodo = async (todo) => {
 
 
 export const removeTodo = async (id) => {
-    return await fetch(`http://localhost:9001/todos/${id}`, {
+    return await fetch(`${baseUrl}/${id}`, {
         method: 'DELETE',
         headers: {
             'Accept': 'application/json',
