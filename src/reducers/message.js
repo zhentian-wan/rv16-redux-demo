@@ -1,7 +1,7 @@
 import {
     TODO_ADD,
     LOAD_TODOS,
-    TOGGLE_TODO,
+    TOGGLE_TODO, TODO_DELETED,
 } from './todo';
 
 const MESSAGE_SHOW = 'MESSAGE_SHOW';
@@ -18,6 +18,7 @@ export default (state = '', action) => {
         case TODO_ADD:
         case TOGGLE_TODO:
         case LOAD_TODOS:
+        case TODO_DELETED:
             return '';
         default:
             return state;

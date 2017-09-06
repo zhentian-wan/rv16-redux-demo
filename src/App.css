@@ -58,3 +58,12 @@ li {
   background-color: darkcyan;
   color: #ccccc;
 }
+
+
+.delete-item {
+  visibility: hidden;
+}
+
+li:hover span.delete-item {
+  visibility: visible;
+}

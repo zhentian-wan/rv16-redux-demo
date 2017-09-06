@@ -6,73 +6,9 @@
       "isComplete": true
     },
     {
-      "id": 2,
-      "name": "Create initial state",
-      "isComplete": false
-    },
-    {
       "id": 3,
       "name": "Render based on state",
       "isComplete": true
-    },
-    {
-      "isComplete": false,
-      "id": 4
-    },
-    {
-      "name": "awef",
-      "isComplete": true,
-      "id": 5
-    },
-    {
-      "name": "123",
-      "isComplete": true,
-      "id": 6
-    },
-    {
-      "name": "234",
-      "isComplete": true,
-      "id": 7
-    },
-    {
-      "name": "24424",
-      "isComplete": false,
-      "id": 8
-    },
-    {
-      "name": "234234234234",
-      "isComplete": true,
-      "id": 9
-    },
-    {
-      "name": "awef",
-      "isComplete": false,
-      "id": 10
-    },
-    {
-      "name": "awef",
-      "isComplete": false,
-      "id": 11
-    },
-    {
-      "name": "test",
-      "isComplete": false,
-      "id": 12
-    },
-    {
-      "name": "awef",
-      "isComplete": true,
-      "id": 13
-    },
-    {
-      "name": "awefawe",
-      "isComplete": true,
-      "id": 14
-    },
-    {
-      "name": "awefawefawef",
-      "isComplete": false,
-      "id": 15
     }
   ]
 }

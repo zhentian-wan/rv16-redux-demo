@@ -15,7 +15,7 @@
   },
   "scripts": {
     "flow": "flow",
-    "dev-server": "json-server -p 9000 db.json",
+    "dev-server": "json-server -p 9001 db.json",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
