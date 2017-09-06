@@ -1,8 +1,9 @@
 // @flow
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import type {TodoType} from '../store';
-import {fetchTodos, toggleTodo, deleteTodo} from '../reducers/todo';
+import {fetchTodos, toggleTodo, deleteTodo, getVisibleTodos} from '../reducers/todo';
 
 
 const TodoItem = ({id, name, isComplete, toggleTodo, deleteTodo}: TodoType) => (
@@ -39,7 +40,7 @@ class TodoList extends Component {
     }
 }
 
-export default connect(
-    (state) => ({todos: state.todo.todos}),
+export default withRouter(connect(
+    (state, {match}) => ({todos: getVisibleTodos(state.todo.todos, match.params.filter)}),
     {fetchTodos, toggleTodo, deleteTodo}
-)(TodoList);
+)(TodoList));

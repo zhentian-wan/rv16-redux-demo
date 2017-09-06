@@ -9,6 +9,16 @@
       "id": 3,
       "name": "Render based on state",
       "isComplete": true
+    },
+    {
+      "name": "awef",
+      "isComplete": false,
+      "id": 4
+    },
+    {
+      "name": "fweg",
+      "isComplete": false,
+      "id": 5
     }
   ]
 }
