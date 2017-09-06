@@ -67,3 +67,7 @@ li {
 li:hover span.delete-item {
   visibility: visible;
 }
+
+a {
+  padding: 0 2px;
+}
